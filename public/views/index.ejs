@@ -1,0 +1,62 @@
+<!-- 
+    _|    _|  _|_|_|_|  _|_|_|_|  _|     _|_|_|_|_|  _|    _|
+   _|    _|  _|        _|    _|  _|         _|      _|    _|
+  _|_|_|_|  _|_|_|    _|_|_|_|  _|         _|      _|_|_|_|
+ _|    _|  _|        _|    _|  _|         _|      _|    _|
+_|    _|  _|_|_|_|  _|    _|  _|_|_|_|   _|      _|    _|
+
+    _|_|_|_|  _|_|_|_|  _|_|_|_|  _|  _|_|_|_| _|_|_|_|_| _|_|_|_|  __|   _|  _|_|_|_|  _|_|_|_|
+   _|    _|  _|        _|        _|  _|           _|     _|    _|  _|_|  _|  _|        _|
+  _|_|_|_|  _|_|_|_|  _|_|_|_|  _|  _|_|_|_|     _|     _|_|_|_|  _| _| _|  _|        _|_|_|
+ _|    _|        _|        _|  _|        _|     _|     _|    _|  _|  _|_|  _|        _|
+_|    _|  _|_|_|_|  _|_|_|_|  _|  _|_|_|_|     _|     _|    _|  _|   __|  _|_|_|_|  _|_|_|_|
+
+
+ -->
+ 
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Agendamento de Consultas</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<body>
+	<section class="intro">
+		<img id="logo" src="../img/logo.svg" alt="Logotipo">
+		<section id="login" class="formularioEntrada">
+		<h1>Entre na sua conta</h1>
+		<form id="loginPaciente" class="login-form mostra" method="post">
+			<input type="email" name="emailLogin" placeholder="E-mail" required>
+			<input type="password" name="senhaLogin" placeholder="Senha" required>
+			<button type="submit" class="btn-login">Entrar</button>
+		</form>
+		</section>
+		<div class="cadastrarBtn">
+			<a href="/cadastro">
+				<i class="material-icons icone-setaLado">arrow_right</i>
+				<p>Não sou Cadastrado</p>
+			</a>
+		</div>
+		<div class="arrow-hint">
+			<a href="#home">
+				<i class="material-icons icone-setaBaixo">expand_more</i>
+			</a>
+		</div>
+	</section>
+
+	<!-- Seção da home da página -->
+	<section id="home">
+		<div id="textoApresentacao">
+			<h1>Seja bem vindo</h1>
+			<p><i>Marque sua consulta com mais facilidade e <strong>sem enfrentar filas</strong>!</i></p>
+		</div>
+	</section>
+
+<script type="text/javascript" src="js/funcoesAjuda/effect-roll.js"></script>
+
+</body>
+</html>

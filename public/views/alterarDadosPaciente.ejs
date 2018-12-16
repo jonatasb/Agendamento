@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Agendamento de Consultas</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+</head>
+<body>
+	<img id="logo" src="../img/logo.svg" alt="Logotipo">
+	<section id="atualizar" class="formularioEntrada">
+	  <!-- Alterar dadas do Paciente -->
+	  <h1>Atualização de Dados</h1>
+	  <form id="dadosPaciente" class="paciente-form" method="post">
+	  	<picture>
+	  		<img src="../img/anonimo.png" id="fotoPerfilAtualizar" class="fotoAtualizar" id="foto">
+	  		<input type="file" name="escolherFoto" accept="images/*">
+	  	</picture>
+	    <input type="text" name="nome" placeholder="Nome" required>
+	    <input type="email" name="email" placeholder="E-mail" required>
+	    <input type="text" name="cpf" placeholder="CPF" required>
+	    <input type="text" name="sus" placeholder="SUS" required>
+	    <input type="text" name="cartao-familia" placeholder="Cartão Família" required>
+	    <button type="submit" class="btn-atualizar" onclick="alterarDados()">Atualizar Perfil</button>
+	  </form>
+	</section>
+
+<script type="text/javascript" src="../js/funcaoAtualizar/atualizarFoto.js"></script>
+
+</body>
+</html>

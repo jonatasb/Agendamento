@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Agendamento de Consultas</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.min.js"></script>
+</head>
+<body>
+	<img id="logo" src="../img/logo.svg" alt="Logotipo">
+	<section id="cadastro" class="formularioEntrada">
+		<div class="selecaoDeUsuario">
+			<p id="who">Quem é você?</p>
+			<div>
+				<button id="btn1" class="btn-pressed" name="pacienteCadastro" onclick="press(this.name)">Paciente</button>
+				<button id="btn2" class="btn" name="clinicaCadastro" onclick="press(this.name)">Clínica</button>
+			</div>
+		</div>
+	  <!-- Cadastro do Paciente -->
+	  <form id="cadastroPaciente" class="cadastro-form mostra" method="post">
+	    <input type="text" name="nome" placeholder="Nome" required>
+	    <input type="email" name="email" placeholder="E-mail" required>
+	    <input type="email" name="confirmEmail" placeholder="Confirmar E-mail" required>
+	    <input type="password" name="senhaCad" placeholder="Senha" required>
+	    <input type="password" name="confirmSenha" placeholder="Confirmar Senha" required>
+	    <div class="container-cadastro">
+	      <input type="text" name="cpfCad"class="cpf" placeholder="CPF" required>
+	      <input type="text" name="susCad" placeholder="SUS" class="sus" >
+	    </div>
+    	<input type="text" name="fonePaciente" class="fone" placeholder="N° de Celular">
+	    <input type="text" name="tipo" value="paciente" style="display: none;">
+	    <button type="submit" class="btn-cadastrar">Cadastrar</button>
+	  </form>
+
+	  <!-- Cadastro da Clínica -->
+	  <form id="cadastroClinica" class="cadastro-form esconde" method="post">
+	  	<input type="text" name="nome" placeholder="Nome da Clínica" required>
+	    <div>
+	    	<div class="ruaEnumero">
+	    		<input type="text" class="ruaCad" name="ruaCad" placeholder="Rua" required>
+	    		<input type="text" class="numCad" name="numCad" placeholder="N°" required>
+	    	</div>
+	    	<input type="text" class="bairroCad" name="bairroCad" placeholder="Bairro" required>
+	    </div>
+	  	<input type="email" name="email" placeholder="E-mail" required>
+	  	<input type="email" name="confirmEmail" placeholder="Confirmar E-mail" required>
+	  	<input type="password" name="senhaCad" placeholder="Senha" required>
+	  	<input type="password" name="confirmSenha" placeholder="Confirmar Senha" required>
+	  	<input type="text" name="cnpj" class="cnpj" placeholder="CNPJ" required>
+	  	<input type="text" name="tipo" value="clinica" style="display: none;">
+	  	<button type="submit" class="btn-cadastrar">Cadastrar</button>
+	  </form>
+	</section>
+
+<script type="text/javascript" src="../js/funcoesAjuda/press.js"></script>
+
+<script type="text/javascript">
+	$('.cpf').mask('000.000.000-00', {reverse: false});
+	$('.sus').mask('000 0000 0000 0000', {reverse:false});
+	$('.fone').mask('(00) 00000-0000', 	{reverse: false});
+	$('.cnpj').mask('00.000.000/0000-00', {reverse: false})
+</script>
+
+</body>
+</html>

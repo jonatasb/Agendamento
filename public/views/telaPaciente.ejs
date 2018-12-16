@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Agendamento de Consultas</title>
+	<link rel="shortcut icon" href="" type="image/x-png">
+	<link rel="stylesheet" type="text/css" href="../css/telaUser.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+	<div id="body">
+		<div id="telaPrincipal">
+			<header>
+				<div id="header">
+					<h1>Health Assistance</h1>
+					<a href="#configuracoes"><i id="settingsBtn" class="material-icons icone-config">settings</i></a>
+				</div>
+				<nav id="escolheTela">
+					<button id="btn1" class="btn-pressed" name="perfil" onclick="pressNav(this.name)">Perfil</button>
+					<button id="btn2" class="btn" name="consultas" onclick="pressNav(this.name)">Consultas</button>
+				</nav>
+			</header>
+
+			<section id="dadosUser" class="default mostra">
+				<!-- Aba lateral que mostra os dados do paciente -->
+				<img src="../img/anonimo.png" id="foto_user" alt="Foto de perfil do usuário">
+				<div id="dados">
+					<p id="nome" class="txt_perfil">Nome: <!-- Nome do usuário --></p>
+					<p id="telefone" class="txt_perfil">Telefone: <!-- Número do telefone --></p>
+					<p id="cpf" class="txt_perfil">CPF: <!-- Número de CPF --></p>
+					<p id="sus" class="txt_perfil">Cartão SUS: <!-- Número cartão do SUS --></p>
+					<p id="email" class="txt_perfil">E-mail: <!-- Email --></p>
+				</div>
+				<a id="btn_marcarConsulta" class="btnPerfil" href="/marcarConsulta">Marcar Consulta</a>
+			</section>
+
+
+			<section id="consultas" class="esconde">
+				<!-- Todas as consultas realizadas -->
+				<div class="card card-consulta">
+						
+						<img class="imgClinica" src="../img/imagem.jpg" alt="Foto da Última Clínica Visitada" style="width: 100%;">
+						<div class="container">
+							<div id="info">
+								<h2 class="title"><b>Local da Última Consulta</b></h2>
+								<p class="text_consulta">Data:  Data da consulta </p>
+								<p class="text_consulta">Médico:  Nome do médico</p>
+							</div>
+							<button class="btnCard">Ver Clínica</button>
+						</div>
+				</div>
+				<a href="marcarConsulta"><img class="icon" src="../img/icones/add.svg"></a>
+			</section>
+		</div>
+
+		<section id="config" style="display: none;">
+			<div id="headerConfig">
+				<i id="volta" class="material-icons setaLeft">chevron_left</i>
+				<h1>Configurações</h1>
+			</div>
+			<div id="bodyConfig">
+				<div id="contaConfig">
+					<img src="../img/icones/perfil.svg" class="icone">
+					<h2>Conta</h2>
+				</div>
+				<div id="ajudaConfig">
+					<img src="../img/icones/help.svg" class="icone">
+					<h2>Sobre</h2>
+				</div>
+				<div id="sair">
+					<img src="../img/icones/sair.svg" class="icone">
+					<h2>Sair</h2>
+				</div>
+			</div>
+		</section>
+	</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="../js/funcoesAjuda/pressNav.js"></script>
+<script type="text/javascript" src="../js/funcaoPerfil/clicaIcons.js"></script>
+
+</body>
+</html>

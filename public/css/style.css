@@ -1,0 +1,517 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: lighter;
+	box-sizing: border-box;
+	outline: none;
+}
+
+html,
+body{
+	height: 100vw;
+}
+
+:root{
+	--white: rgba(255, 255, 255, 0.8);
+	--fundo-formulario: rgba(0, 0, 0, 0.6);
+	--verde: #3bd677;
+	--cinza: rgba(196, 190, 190, 0.9);
+	--Largura: 7rem;
+}
+
+body{
+	background: url("../img/fundo.png") no-repeat no-repeat center center fixed;
+	background-size: cover;
+}
+
+a {
+	text-decoration: none;
+	color: var(--white);
+}
+
+
+
+#uploader {
+	width: 100%;
+	height: 1rem;
+	-webkit-appearance: none;
+}
+
+/* PÁGINA INICIAL, PARTE 1 */
+
+.intro {
+	height: 640px;
+}
+
+#logo {
+	display: block;
+	width: 200px;
+	margin: 1rem auto;
+}
+
+/* FORMULÁRIOS DE LOGIN E CADASTRO */
+
+.formularioEntrada{
+	background-color: var(--fundo-formulario);
+	width: 90vw;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding:0 2rem 2rem 2rem;
+}
+
+.formularioEntrada h1{
+	margin-bottom: 2rem;
+	color: var(--verde);
+	font-weight: bold;
+}
+
+input:focus{
+	transform: 0.4s;
+	border-bottom: solid 1px var(--verde);
+	padding-bottom: 0.7rem;
+	font-size: 12px;
+}
+
+/* FORMULÁRIO DE LOGIN */
+
+#login h1 {
+	margin-top: 1rem;
+}
+
+.login-form{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.login-form input{
+	margin-bottom: 1rem;
+	background: none;
+	border: none;
+	color: var(--white);
+	border-bottom: 1px var(--white) solid;
+	transition: 0.4s;
+}
+
+.btn-login{
+	width: 14rem;
+	height: 3rem;
+	margin: 0 auto;
+	margin-top: 3rem;
+	border: none;
+	color: black;
+	font-size: 1.2rem;
+	font-weight: bold;
+	background-color: var(--verde);
+}
+
+/* BOTÃO PARA REDIRECIONAR PARA TELA DE CADASTRO */
+
+.cadastrarBtn a {
+	display: flex;
+	margin-left: 1rem;
+}
+
+.cadastrarBtn p {
+	display: inline-block;
+}
+
+/* SETA DE TRANSIÇÃO */
+
+.arrow-hint {
+	border-radius: 20px;
+	padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+	background-color: var(--fundo-formulario);
+	bottom: 24px;
+	left: 50%;
+	margin-left: -12px;
+	position: absolute;
+}
+
+.arrow-hint a {
+	cursor: pointer;
+}
+
+/* PÁGINA DE EXPLICAÇÃO DO PROJETO */
+
+#home{
+	color: var(--white);
+	position: absolute;
+	bottom: -640px;
+	height: 640px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding-top: 1.5rem;
+	padding-left: 1.5rem;
+}
+
+#textoApresentacao h1{
+	font-size: 1.5rem;
+}
+
+#textoApresentacao p{
+	font-size: 1rem;
+	width: 85vw;
+	margin-left: 1rem;
+}
+
+#textoApresentacao strong {
+	font-weight: bold;
+}
+
+/* FORMULÁRIO DE CADASTRO */
+
+#who {
+	color: var(--verde);
+	font-weight: normal;
+}
+
+.cadastro-form{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.cadastro-form input{
+	margin-bottom: 1rem;
+	background: none;
+	border: none;
+	color: var(--white);
+	border-bottom: 1px var(--white) solid;
+}
+
+.container-cadastro{
+	display: flex;
+	justify-content: space-between;
+}
+
+.ruaEnumero {
+	display: flex;
+	justify-content: space-between;
+}
+
+.ruaCad {
+	width: 75%;
+}
+
+.numCad{
+	width: 20%;
+}
+
+.bairroCad {
+	width: 100%;
+}
+
+.container-cadastro input{
+	width: 45%;
+}
+
+.btn-cadastrar{
+	width: 14rem;
+	height: 3rem;
+	margin: 0 auto;
+	border: none;
+	color: black;
+	font-size: 1.2rem;
+	font-weight: bold;
+	background-color: var(--verde);
+}
+
+::placeholder {
+	color: var(--white);
+}
+
+/* BOTÕES DE SELEÇÃO DE USUÁRIO */
+
+.selecaoDeUsuario {
+	margin: 1rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	font-size: 1.25rem;
+}
+
+.selecaoDeUsuario p {
+	color: var(--white);
+	margin-bottom: 0.5rem;
+}
+
+button {
+	border-radius: 4px;
+}
+
+.selecaoDeUsuario button{
+	padding: 0.5rem;
+	width: 6.75rem;
+	border: 1px solid var(--cinza);
+	font-weight: bold;
+}
+
+.mostra {
+	display: flex;
+}
+
+.esconde {
+	display: none;
+}
+
+.btn-pressed {
+	background-color: var(--cinza);
+}
+
+.btn {
+	background-color: var(--white);
+}
+
+#btn1 {
+	margin: 0 -5px 0 0;
+	border-radius: 4px 0 0 4px;
+}
+
+#btn2 {
+	border-radius: 0 4px 4px 0;
+}
+
+/* TELA DE ALTERAR DADOS */
+
+#fotoPerfilAtualizar {
+	width: var(--Largura);
+	height: var(--Largura);
+	margin-bottom: 1rem;
+	border-radius: 50%;
+	position: absolute;
+}
+
+.paciente-form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.paciente-form input{
+	margin-bottom: 1rem;
+	background: none;
+	border: none;
+	color: var(--white);
+	border-bottom: 1px var(--white) solid;
+}
+
+picture {
+	margin: 0 auto 1rem auto;
+	width: var(--Largura);
+	height: var(--Largura);
+}
+
+input[type = file] {
+	border: none;
+	cursor: pointer;
+	border-radius: 50%;
+	position: absolute;
+	width: var(--Largura);
+	height: var(--Largura);
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+#atualizar h1 {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.btn-atualizar {
+	width: 14rem;
+	height: 3rem;
+	margin: 0 auto;
+	margin-top: 3rem;
+	border: none;
+	color: black;
+	font-size: 1.2rem;
+	font-weight: bold;
+	background-color: var(--verde);
+}
+
+/* CADASTRO DE MÉDICOS */
+
+.medico-form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+#cadastroMedico picture {
+	width: var(--Largura);
+	height: var(--Largura);
+}
+
+#tituloCadastrarMedico {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.medico-form input{
+	transition: 0.4s;
+	margin-bottom: 1rem;
+	background: none;
+	border: none;
+	border-bottom: 1px var(--white) solid;
+	color: var(--white);
+}
+/*
+.medico-form input:focus{
+	border-bottom: solid 2px var(--verde);
+}*/
+
+#fotoMedicoCadastrar {
+	width: var(--Largura);
+	height: var(--Largura);
+	margin-bottom: 1rem;
+	border-radius: 50%;
+	position: absolute;
+}
+#filtrarEspecialidades {
+	width: 100%; 
+}
+
+#filtro {
+	width: 100%;
+}
+
+#especialidades {
+	width: 100%;
+	border: none;
+	margin-bottom: 1rem;
+}
+
+#btnCriaMedico {
+	width: 14rem;
+	height: 3rem;
+	font-size: 1.25rem;
+}
+
+label {
+	color: var(--white);
+}
+
+#horarios {
+	color: var(--white);
+}
+
+tr {
+	display: flex;
+}
+
+.checkbox {
+	margin-bottom: 0 !important;
+	margin-left: 5px;
+}
+
+.first {
+	display: flex;
+	align-items: center;
+	width: 23%;
+}
+
+td:not(.first) {
+	width: 40%;
+}
+
+p {
+	color: var(--white);
+}
+
+p input {
+	margin-right: 8px;
+}
+
+table{
+	width: 100%;
+}
+
+th{
+	width: 34%;
+	text-align: center;
+	padding-left: 0.5rem;
+}
+
+td input{
+	width: 95%;
+	margin: 0 auto;
+
+}
+
+
+.initial{
+	text-align: initial;
+	margin-left: 10px;
+	width: 25%;
+}
+
+.second{
+	text-align: initial;
+}
+
+
+/* SEÇÕES DE REAJUSTE DE TELA */
+
+@media screen and (min-width: 576px) {
+	nav {
+		font-size: 1.125rem;
+	}
+
+	#textoApresentacao h1 {
+		font-size: 2rem;
+	}
+
+	#textoApresentacao p {
+		font-size: 1.25rem;
+		width: 65vw;
+	}
+
+	.formularioEntrada {
+		width: 70vw;
+	}
+	.selecaoDeUsuario {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+@media screen and (min-width: 768px){
+	#home {
+		padding-top: 0;
+		padding-left: 3.5rem;
+	}
+
+	#textoApresentacao h1 {
+		font-size: 2.5rem;
+	}
+
+	#textoApresentacao p {
+		font-size: 1.5rem;
+		width: 30vw;
+	}
+
+	.formularioEntrada {
+		width: 35vw;
+	}
+	.selecaoDeUsuario {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	nav {
+		justify-content: flex-end;
+		margin-right: 18px;
+		font-size: 1.25rem;
+	}
+}
+
+@media screen and (min-width: 992px) {}

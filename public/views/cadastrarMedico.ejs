@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Agendamento de Consultas</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.min.js"></script>
+</head>
+<body>
+	<img id="logo" src="../img/logo.svg" alt="Logotipo">
+	<section class="formularioEntrada" id="cadastroMedico">
+		<h1 id="tituloCadastrarMedico">Cadastrar Médico</h1>
+		<form class="medico-form" method="post">
+			<picture>
+				<img src="../img/anonimo.png" id="fotoMedicoCadastrar" class="fotoAtualizar" id="foto">
+				<input type="file" name="escolherFoto" required>
+			</picture>
+			<input type="text" name="nomeMedico" placeholder="Nome do Médico" required>
+			<input type="text" name="crm" placeholder="CRM" required>
+
+			<div id="filtrarEspecialidades">
+				<input id="filtro" type="text" placeholder="Escolha a especialidade">
+				<select id="especialidades" name="especialidade" required>
+				  <option value="Médico Geral">Médico Geral</option>
+				  <option value="Acupuntura">Acupuntura</option>
+				  <option value="Alergia e Imunoogia">Alergia e Imunoogia</option>
+				  <option value="Anestesiologia">Anestesiologia</option>
+				  <option value="Angiologia">Angiologia</option>
+				  <option value="Oncologia">Oncologia</option>
+				  <option value="Cardiologia">Cardiologia</option>
+				  <option value="Coloproctologia">Coloproctologia</option>
+				  <option value="Dermatologia">Dermatologia</option>
+				  <option value="Endocrinologia">Endocrinologia</option>
+				  <option value="Endoscopia">Endoscopia</option>
+				  <option value="Gastroenterologia">Gastroenterologia</option>
+				  <option value="Geriatria">Geriatria</option>
+				  <option value="Infectologia">Infectologia</option>
+				  <option value="Nefrologia">Nefrologia</option>
+				  <option value="Neurocirurgia">Neurocirurgia</option>
+				  <option value="Neurologia">Neurologia</option>
+				  <option value="Nutrologia">Nutrologia</option>
+				  <option value="Obstetrícia">Obstetrícia</option>
+				  <option value="Oftalmologia">Oftalmologia</option>
+				  <option value="Ortopedia">Ortopedia</option>
+				  <option value="Otorrinolaringologia">Otorrinolaringologia</option>
+				  <option value="Patologia">Patologia</option>
+				  <option value="Pediatria">Pediatria</option>
+				  <option value="Pneumologia">Pneumologia</option>
+				  <option value="Psiquiatria">Psiquiatria</option>
+				  <option value="Radiologia">Radiologia</option>
+				  <option value="Radioterapia">Radioterapia</option>
+				  <option value="Reumatologia">Reumatologia</option>
+				  <option value="Urologia">Urologia</option>
+				</select>
+			</div>
+
+			<label for="#horarios">Horários:</label>
+			<table id="horarios">
+				<thead>
+					<tr>
+						<th class="initial">Dia</th>
+						<th class="second">Manhã</th>
+						<th>Tarde</th>
+					</tr>
+				</thead>
+				<tbody id="listaHorarios">
+					<tr>
+						<td class="first">Dom:  <input type="checkbox" class="checkbox" name="domingo"></td>
+						<td><input type="text" class="hrs" name="manhaDomingo" placeholder="00:00-00:00"></td>
+						<td><input type="text" class="hrs" name="tardeDomingo" placeholder="00:00-00:00"></td>
+					</tr>
+					<tr>
+						<td class="first">Seg:  <input type="checkbox" class="checkbox" name="segunda"></td>
+						<td><input type="text" class="hrs" name="manhaSegunda" placeholder="00:00-00:00"></td>
+						<td><input type="text" class="hrs" name="tardeSegunda" placeholder="00:00-00:00"></td>
+					</tr>
+					<tr>
+						<td class="first">Ter:  <input type="checkbox" class="checkbox" name="terca"></td>
+						<td><input type="text" class="hrs" name="manhaTerca" placeholder="00:00-00:00"></td>
+						<td><input type="text" class="hrs" name="tardeTerca" placeholder="00:00-00:00"></td>
+					</tr>
+					<tr>
+						<td class="first">Qua:  <input type="checkbox" class="checkbox" name="quarta"></td>
+						<td><input type="text" class="hrs" name="manhaQuarta" placeholder="00:00-00:00"></td>
+						<td><input type="text" class="hrs" name="tardeQuarta" placeholder="00:00-00:00"></td>
+					</tr>
+					<tr>
+						<td class="first">Qui:  <input type="checkbox" class="checkbox" name="quinta"></td>
+						<td><input type="text" class="hrs" name="manhaQuinta" placeholder="00:00-00:00"></td>
+						<td><input type="text" class="hrs" name="tardeQuinta" placeholder="00:00-00:00"></td>
+					</tr>
+					<tr>
+						<td class="first">Sex:  <input type="checkbox" class="checkbox" name="sexta"></td>
+						<td><input type="text" class="hrs" name="manhaSexta" placeholder="00:00-00:00"></td>
+						<td><input type="text" class="hrs" name="tardeSexta" placeholder="00:00-00:00"></td>
+					</tr>
+					<tr>
+						<td class="first">Sáb:  <input type="checkbox" class="checkbox" name="sabado"></td>
+						<td><input type="text" class="hrs" name="manhaSabado" placeholder="00:00-00:00"></td>
+						<td><input type="text" class="hrs" name="tardeSabado" placeholder="00:00-00:00"></td>
+					</tr>
+				</tbody>
+			</table>
+			<label for="#qtdePacientes">N° de pacientes por dia:</label>
+			<p><input id="qtdePacientes" type="number" class="number" name="nDePaciente" min="1">Pacientes</p> 		
+
+			<button type="submit" id="btnCriaMedico" class="btn-cadastrar">Cadastrar</button>
+		</form>
+
+	</section>
+
+	<div id="carregamento">
+		<p id="porcentagem"></p>
+	</div>
+	
+<script type="text/javascript" src="../js/funcaoAtualizar/atualizarFoto.js"></script>
+<script type="text/javascript" src="../js/funcoesAjuda/filtraSelect.js"></script>
+
+<script type="text/javascript">
+	$('.hrs').mask('00:00-00:00', {reverse: false});
+	$('.number').mask('00', {reverse: false});
+</script>
+
+</body>
+</html>
